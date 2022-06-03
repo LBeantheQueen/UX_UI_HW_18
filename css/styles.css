@@ -16,7 +16,7 @@ body {
 
 nav {
     width: 100%;
-    padding: 1%;
+    padding: 2%;
 }
 
 ul {
@@ -24,26 +24,32 @@ ul {
     position: relative;
 }
 
+
 header ul {
     float: right;
 }
 
 li a {
-    padding: 10px;
+    padding: 20px;
     color: #9BB1BF;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 20px;
 }
 
 .heroImg {
     display: inline-block;
-    height: 600px;
-    padding-bottom: 200px;
+    height: 1%;
+    padding-top: 50px;
+    padding-left: 50px;
     position: relative;
-    align-items: center;
+    text-align: center;
 }
 
 .contentBlock {
     display: inline-block;
     color: white;
+    text-align: center;
 }
 
 .content {
@@ -53,7 +59,12 @@ li a {
 
 h1 {
     position: center;
-    align-items: center;
+    text-align: center;
+}
+
+.mySkills {
+    background-color: white;
+    padding: 10px;
 }
 
 .flexContainer {
@@ -64,6 +75,17 @@ h1 {
 
 .workGrid {
     display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.item {
+    text-align: center;
+    color: white;
+}
+
+.item-2 {
+    background-color: #324E59;
 }
 
 footer {
@@ -78,4 +100,22 @@ footer ul {
 
 footer li {
     padding: 10px;
+}
+
+@media screen and (max-width: 600) {
+    .flexContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .workGrid {
+        grid-template-columns: 300px 300px 300px 300px 300px 300px;
+        grid-template-areas: 
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5"
+        "item-6";
+    }
 }
